@@ -1,0 +1,61 @@
+@use "../App.scss" as App;
+
+.header {
+   background-color: App.$lightgrey;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1000;
+
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+   border: 1px solid #343434;
+}
+
+.headerContent {
+   display: flex;
+   justify-items: center;
+   align-items: center;
+
+   .logo {
+      display: flex;
+      flex-grow: 1;
+   }
+
+   form {
+      display: flex;
+      padding: 1rem 0;
+      flex-grow: 3;
+      flex-shrink: 1;
+
+      input {
+         background-color: #131313;
+         width: 100%;
+         padding: 0.4rem 0.8rem;
+         transition: 0.2s;
+         border-radius: 4px 0px 0px 4px;
+         border: 2px solid #343434;
+         border-right: none;
+      }
+
+      input:focus {
+         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+      }
+
+      .searchButton {
+         color: #2d2d2d;
+         padding: 0 0.8rem;
+         border-radius: 0px 4px 4px 0px;
+         background-color: #131313;
+         border: 2px solid #343434;
+         border-left: none;
+         transition: 0.2s;
+      }
+   }
+
+   .github {
+      display: flex;
+      flex-grow: 1;
+      justify-content: end;
+   }
+}
