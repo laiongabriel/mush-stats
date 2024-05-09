@@ -5,7 +5,7 @@ function PlayerNotFound() {
    return (
       <HelmetProvider>
          <Helmet>
-            <title>Jogador não encontrado | MushMC Player Stats</title>
+            <title>Jogador não encontrado | Mush Stats</title>
             <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
          </Helmet>
          <Header />

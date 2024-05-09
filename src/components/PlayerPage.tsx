@@ -32,9 +32,7 @@ function PlayerPage() {
    return (
       <HelmetProvider>
          <Helmet>
-            <title>
-               {data.response.account.username} | MushMC Player Stats
-            </title>
+            <title>{data.response.account.username} | Mush Stats</title>
             <link
                rel="shortcut icon"
                href={`https://visage.surgeplay.com/face/16/${

@@ -5,7 +5,7 @@ function NotFound() {
    return (
       <HelmetProvider>
          <Helmet>
-            <title>Página não encontrada | MushMC Player Stats</title>
+            <title>Página não encontrada | Mush Stats</title>
             <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
          </Helmet>
          <Header />
