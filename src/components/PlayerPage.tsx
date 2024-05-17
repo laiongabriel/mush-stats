@@ -9,6 +9,7 @@ import Skywars from "./Minigames/Skywars";
 import PlayerSummary from "./PlayerSummary";
 import HungerGames from "./Minigames/HungerGames";
 import PvP from "./Minigames/PvP";
+import Bedfight from "./Minigames/Bedfight";
 
 function PlayerPage() {
    const { playerName } = useParams();
@@ -26,7 +27,7 @@ function PlayerPage() {
          </div>
       );
    }
-   if (error) return <p>{error}</p>;
+   if (error) return <p>Erro: {error}</p>;
    if (data?.success === false) return <PlayerNotFound />;
    if (!data) return null;
    return (
@@ -53,6 +54,9 @@ function PlayerPage() {
                <Skywars data={data.response.stats.skywars_r1} />
                <HungerGames data={data.response.stats.hungergames} />
                <PvP data={data.response.stats.pvp} />
+
+               <h1>Duels</h1>
+               <Bedfight data={data.response.stats.duels} />
             </section>
          </div>
       </HelmetProvider>

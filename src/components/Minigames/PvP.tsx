@@ -5,7 +5,7 @@ import PvPIcon from "../../assets/img/icons/pvp.png";
 import { calculateRatio, formatNumber } from "../../functions.ts";
 
 type PvPProps = {
-   data: PvPStats | null;
+   data: PvPStats;
 };
 
 function PvP({ data }: PvPProps) {
@@ -32,7 +32,7 @@ function PvP({ data }: PvPProps) {
                         fontSize: "1.1rem",
                      }}
                   >
-                     {data?.coins
+                     {data.coins
                         ? formatNumber(Math.floor(data.coins / 10))
                         : "-"}
                   </span>
