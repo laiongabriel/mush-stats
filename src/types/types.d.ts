@@ -134,6 +134,16 @@ interface BedwarsStats {
    "4v4_max_winstreak"?: number;
    "4v4_wins"?: number;
    "4v4_winstreak"?: number;
+
+   mega_beds_broken?: number;
+   mega_deaths?: number;
+   mega_final_deaths?: number;
+   mega_final_kills?: number;
+   mega_kills?: number;
+   mega_losses?: number;
+   mega_max_winstreak?: number;
+   mega_wins?: number;
+   mega_winstreak?: number;
 }
 
 interface SkywarsStats {

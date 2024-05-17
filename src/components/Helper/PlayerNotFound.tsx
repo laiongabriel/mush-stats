@@ -11,7 +11,7 @@ function PlayerNotFound() {
          </Helmet>
          <Header />
          <div className={`${styles.playerNotFoundContainer} animeLeft`}>
-            <h1>Jogador não encontrado. Tente novamente.</h1>
+            <h1>Jogador não encontrado.</h1>
          </div>
       </HelmetProvider>
    );

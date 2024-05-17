@@ -280,6 +280,27 @@ function Bedwars({ data }: BedwarsProps) {
                         )}
                      </td>
                   </tr>
+
+                  <tr>
+                     <td>Mega</td>
+                     <td>{formatNumber(data.mega_wins)}</td>
+                     <td>{formatNumber(data.mega_losses)}</td>
+                     <td>{formatNumber(data.mega_kills)}</td>
+                     <td>{formatNumber(data.mega_deaths)}</td>
+                     <td>{formatNumber(data.mega_final_kills)}</td>
+                     <td>{formatNumber(data.mega_final_deaths)}</td>
+                     <td>{formatNumber(data.mega_beds_broken)}</td>
+                     <td>{calculateRatio(data.mega_wins, data.mega_losses)}</td>
+                     <td>
+                        {calculateRatio(data.mega_kills, data.mega_deaths)}
+                     </td>
+                     <td>
+                        {calculateRatio(
+                           data.mega_final_kills,
+                           data.mega_final_deaths
+                        )}
+                     </td>
+                  </tr>
                </tbody>
             </table>
          </div>

@@ -28,7 +28,7 @@ function Header() {
                <input
                   type="text"
                   pattern="[a-zA-Z0-9_]{3,}"
-                  placeholder="Procurar jogador..."
+                  placeholder="Procurar jogador"
                   required
                   value={playerName}
                   onChange={({ target }) => {
