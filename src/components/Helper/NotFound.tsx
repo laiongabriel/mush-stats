@@ -1,5 +1,6 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Header from "../Header";
+import styles from "../../styles/NotFound.module.scss";
 
 function NotFound() {
    return (
@@ -9,7 +10,7 @@ function NotFound() {
             <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
          </Helmet>
          <Header />
-         <div>
+         <div className={styles.notFoundContainer}>
             <h1>
                Página não encontrada. Verifique o endereço e tente novamente.
             </h1>

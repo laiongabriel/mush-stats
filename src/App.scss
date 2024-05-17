@@ -16,11 +16,12 @@ body {
    line-height: 1.5;
    -webkit-font-smoothing: antialiased;
    font-family: "Onest", sans-serif;
-   padding-top: 7.2rem;
+   padding-top: 73.6px;
 }
 
 main {
-   min-height: calc(100vh - 243px);
+   display: grid;
+   min-height: calc(100vh - 73.6px);
 }
 
 a {
@@ -81,9 +82,10 @@ h2 {
 .loadingContainer {
    display: flex;
    gap: 1.5rem;
-   align-items: center;
+   justify-self: center;
    justify-content: center;
-   margin-top: 8rem;
+   align-items: center;
+   margin-bottom: 73.6px;
 
    p {
       font-size: 1.2rem;

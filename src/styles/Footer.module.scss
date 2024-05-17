@@ -1,13 +1,12 @@
 @use "../App.scss" as App;
 
 .footer {
-   padding: 1.2rem 0;
+   padding: 1rem 0;
    text-align: center;
    background-color: App.$lightgrey;
    border-top: 1px solid #343434;
 
    a {
-      font-weight: 600;
-      text-decoration: underline;
+      color: #cee1f4;
    }
 }

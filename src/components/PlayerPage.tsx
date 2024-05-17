@@ -43,17 +43,18 @@ function PlayerPage() {
          </Helmet>
 
          <Header />
+         <div className={styles.playerPageContainer}>
+            <section className={`${styles.playerSummaryContainer} animeLeft`}>
+               <PlayerSummary data={data} />
+            </section>
 
-         <section className={`${styles.playerSummaryContainer} animeLeft`}>
-            <PlayerSummary data={data} />
-         </section>
-
-         <section className={`${styles.statsContainer} animeLeft`}>
-            <Bedwars data={data.response.stats.bedwars} />
-            <Skywars data={data.response.stats.skywars_r1} />
-            <HungerGames data={data.response.stats.hungergames} />
-            <PvP data={data.response.stats.pvp} />
-         </section>
+            <section className={`${styles.statsContainer} animeLeft`}>
+               <Bedwars data={data.response.stats.bedwars} />
+               <Skywars data={data.response.stats.skywars_r1} />
+               <HungerGames data={data.response.stats.hungergames} />
+               <PvP data={data.response.stats.pvp} />
+            </section>
+         </div>
       </HelmetProvider>
    );
 }

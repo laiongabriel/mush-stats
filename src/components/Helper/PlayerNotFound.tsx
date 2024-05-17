@@ -1,5 +1,6 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Header from "../Header";
+import styles from "../../styles/PlayerNotFound.module.scss";
 
 function PlayerNotFound() {
    return (
@@ -9,7 +10,7 @@ function PlayerNotFound() {
             <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
          </Helmet>
          <Header />
-         <div className="animeLeft">
+         <div className={`${styles.playerNotFoundContainer} animeLeft`}>
             <h1>Jogador não encontrado. Tente novamente.</h1>
          </div>
       </HelmetProvider>
