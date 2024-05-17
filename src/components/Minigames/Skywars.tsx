@@ -19,7 +19,7 @@ function Skywars({ data }: SkywarsProps) {
       <div className={styles.accordionContainer}>
          <div className={styles.accordion} onClick={handleAccordionClick}>
             <div className={styles.minigameName}>
-               <img src={SkywarsIcon} alt="Cama" />
+               <img src={SkywarsIcon} alt="Olho de ender" />
                <h2>Skywars</h2>
             </div>
 

@@ -5,7 +5,7 @@ import PvPIcon from "../../assets/img/icons/pvp.png";
 import { calculateRatio, formatNumber } from "../../functions.ts";
 
 type PvPProps = {
-   data: PvPStats;
+   data: PvPStats | null;
 };
 
 function PvP({ data }: PvPProps) {
@@ -17,7 +17,7 @@ function PvP({ data }: PvPProps) {
             <div className={styles.minigameName}>
                <img
                   src={PvPIcon}
-                  alt="Sopa"
+                  alt="Espada de diamante"
                   style={{ position: "relative", top: "-2px" }}
                />
                <h2>PvP</h2>
@@ -32,7 +32,7 @@ function PvP({ data }: PvPProps) {
                         fontSize: "1.1rem",
                      }}
                   >
-                     {data.coins
+                     {data?.coins
                         ? formatNumber(Math.floor(data.coins / 10))
                         : "-"}
                   </span>

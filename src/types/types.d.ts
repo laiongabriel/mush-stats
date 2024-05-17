@@ -225,31 +225,31 @@ interface PvPStats {
 }
 
 interface DuelsStats {
-   bed_fight_beds_broken: number;
-   bed_fight_deaths: number;
-   bed_fight_kills: number;
-   bed_fight_losses: number;
-   bed_fight_wins: number;
+   bed_fight_beds_broken?: number;
+   bed_fight_deaths?: number;
+   bed_fight_kills?: number;
+   bed_fight_losses?: number;
+   bed_fight_wins?: number;
 
-   bed_fight_max_winstreak: number;
-   bed_fight_winstreak: number;
-   bed_fight_played: number;
+   bed_fight_max_winstreak?: number;
+   bed_fight_winstreak?: number;
+   bed_fight_played?: number;
 
-   bed_fight_doubles_beds_broken: number;
-   bed_fight_doubles_deaths: number;
-   bed_fight_doubles_kills: number;
-   bed_fight_doubles_losses: number;
-   bed_fight_doubles_max_winstreak: number;
-   bed_fight_doubles_played: number;
-   bed_fight_doubles_wins: number;
-   bed_fight_doubles_winstreak: number;
+   bed_fight_doubles_beds_broken?: number;
+   bed_fight_doubles_deaths?: number;
+   bed_fight_doubles_kills?: number;
+   bed_fight_doubles_losses?: number;
+   bed_fight_doubles_max_winstreak?: number;
+   bed_fight_doubles_played?: number;
+   bed_fight_doubles_wins?: number;
+   bed_fight_doubles_winstreak?: number;
 
-   bed_fight_solo_beds_broken: number;
-   bed_fight_solo_deaths: number;
-   bed_fight_solo_kills: number;
-   bed_fight_solo_losses: number;
-   bed_fight_solo_max_winstreak: number;
-   bed_fight_solo_played: number;
-   bed_fight_solo_wins: number;
-   bed_fight_solo_winstreak: number;
+   bed_fight_solo_beds_broken?: number;
+   bed_fight_solo_deaths?: number;
+   bed_fight_solo_kills?: number;
+   bed_fight_solo_losses?: number;
+   bed_fight_solo_max_winstreak?: number;
+   bed_fight_solo_played?: number;
+   bed_fight_solo_wins?: number;
+   bed_fight_solo_winstreak?: number;
 }
