@@ -2,11 +2,8 @@ import styles from "../../styles/AccordionItem.module.scss";
 import useOpenAccordion from "../../hooks/useOpenAccordion.tsx";
 import DownIcon from "../../assets/img/icons/down.svg";
 import SkywarsIcon from "../../assets/img/icons/skywars.png";
-import {
-   calculateRatio,
-   formatNumber,
-   extractSymbol,
-} from "../../functions.ts";
+import PlayerLevel from "../Helper/PlayerLevel.tsx";
+import { calculateRatio, formatNumber } from "../../functions.ts";
 
 type SkywarsProps = {
    data: SkywarsStats;
@@ -27,16 +24,7 @@ function Skywars({ data }: SkywarsProps) {
                <p>
                   Nível:{" "}
                   {data.level ? (
-                     <span
-                        className={styles.minigameLevel}
-                        style={{
-                           color: `${data.level_badge.hex_color}`,
-                           textShadow: "rgba(0, 0, 0, 0.3) 1px 1px 1px",
-                        }}
-                     >
-                        [{data.level}
-                        {extractSymbol(data.level_badge.format)}]
-                     </span>
+                     <PlayerLevel format={data.level_badge.format} />
                   ) : (
                      "-"
                   )}

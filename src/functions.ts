@@ -11,11 +11,3 @@ export function formatNumber(value: number | undefined) {
    if (!value) return "-";
    return value.toLocaleString("pt-BR");
 }
-
-export function extractSymbol(symbol: string) {
-   const regex = /[^A-Za-z0-9&[\]]/;
-   const match = symbol.match(regex);
-
-   if (match) return match[0];
-   else return null;
-}
