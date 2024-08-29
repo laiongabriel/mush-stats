@@ -16,13 +16,32 @@ function PlayerSummary({ data }: PlayerSummaryProps) {
    }
 
    function millisecondsToDate(milliseconds: number) {
+      const now = new Date();
       const date = new Date(milliseconds);
-      const formattedDate = date.toLocaleString("pt-BR", {
-         day: "2-digit",
-         month: "2-digit",
-         year: "numeric",
-      });
-      return formattedDate;
+
+      const difference = now.getTime() - date.getTime();
+      const oneHourInMs = 60 * 60 * 1000;
+      const oneDayInMs = 24 * oneHourInMs;
+
+      if (difference <= oneDayInMs) {
+         if (now.getDate() === date.getDate()) {
+            return `Hoje às ${date.toLocaleTimeString("pt-BR", {
+               hour: "2-digit",
+               minute: "2-digit",
+            })}`;
+         } else {
+            return `Ontem às ${date.toLocaleTimeString("pt-BR", {
+               hour: "2-digit",
+               minute: "2-digit",
+            })}`;
+         }
+      } else {
+         return date.toLocaleDateString("pt-BR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+         });
+      }
    }
 
    return (
