@@ -184,26 +184,31 @@ interface HungerGamesStats {
    kills?: number;
    max_kills?: number;
    wins?: number;
+   games_played?: number;
 
    mode_doublekit_assists?: number;
    mode_doublekit_deaths?: number;
    mode_doublekit_kills?: number;
    mode_doublekit_wins?: number;
+   mode_doublekit_games_played?: number;
 
    mode_minimush_assists?: number;
    mode_minimush_deaths?: number;
    mode_minimush_kills?: number;
    mode_minimush_wins?: number;
+   mode_minimush_games_played?: number;
 
    mode_megamush_assists?: number;
    mode_megamush_deaths?: number;
    mode_megamush_kills?: number;
    mode_megamush_wins?: number;
+   mode_megamush_games_played?: number;
 
    mode_quarterquell_assists?: number;
    mode_quarterquell_deaths?: number;
    mode_quarterquell_kills?: number;
    mode_quarterquell_wins?: number;
+   mode_quarterquell_games_played?: number;
 }
 
 interface PvPStats {
