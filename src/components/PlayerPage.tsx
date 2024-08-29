@@ -10,6 +10,10 @@ import PlayerSummary from "./PlayerSummary";
 import HungerGames from "./Minigames/HungerGames";
 import PvP from "./Minigames/PvP";
 import Bedfight from "./Minigames/Bedfight";
+import Boxing from "./Minigames/Boxing";
+import Bridge from "./Minigames/Bridge";
+import Gladiator from "./Minigames/Gladiator";
+import Soup from "./Minigames/Soup";
 
 function PlayerPage() {
    const { playerName } = useParams();
@@ -57,6 +61,10 @@ function PlayerPage() {
 
                <h1>Duels</h1>
                <Bedfight data={data.response.stats.duels} />
+               <Boxing data={data.response.stats.duels} />
+               <Bridge data={data.response.stats.duels} />
+               <Gladiator data={data.response.stats.duels} />
+               <Soup data={data.response.stats.duels} />
             </section>
          </div>
       </HelmetProvider>

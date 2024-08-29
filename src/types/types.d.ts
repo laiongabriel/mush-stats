@@ -179,7 +179,6 @@ interface HungerGamesStats {
       name: string;
       symbol: string;
    };
-   games_played?: number;
    assists?: number;
    deaths?: number;
    kills?: number;
@@ -188,23 +187,19 @@ interface HungerGamesStats {
 
    mode_doublekit_assists?: number;
    mode_doublekit_deaths?: number;
-   mode_doublekit_games_played?: number;
    mode_doublekit_kills?: number;
    mode_doublekit_wins?: number;
 
-   mode_minimush_games_played?: number;
    mode_minimush_assists?: number;
    mode_minimush_deaths?: number;
    mode_minimush_kills?: number;
    mode_minimush_wins?: number;
 
-   mode_megamush_games_played?: number;
    mode_megamush_assists?: number;
    mode_megamush_deaths?: number;
    mode_megamush_kills?: number;
    mode_megamush_wins?: number;
 
-   mode_quarterquell_games_played?: number;
    mode_quarterquell_assists?: number;
    mode_quarterquell_deaths?: number;
    mode_quarterquell_kills?: number;
@@ -233,14 +228,12 @@ interface DuelsStats {
 
    bed_fight_max_winstreak?: number;
    bed_fight_winstreak?: number;
-   bed_fight_played?: number;
 
    bed_fight_doubles_beds_broken?: number;
    bed_fight_doubles_deaths?: number;
    bed_fight_doubles_kills?: number;
    bed_fight_doubles_losses?: number;
    bed_fight_doubles_max_winstreak?: number;
-   bed_fight_doubles_played?: number;
    bed_fight_doubles_wins?: number;
    bed_fight_doubles_winstreak?: number;
 
@@ -249,7 +242,105 @@ interface DuelsStats {
    bed_fight_solo_kills?: number;
    bed_fight_solo_losses?: number;
    bed_fight_solo_max_winstreak?: number;
-   bed_fight_solo_played?: number;
    bed_fight_solo_wins?: number;
    bed_fight_solo_winstreak?: number;
+
+   boxing_deaths?: number;
+   boxing_kills?: number;
+   boxing_losses?: number;
+   boxing_max_winstreak?: number;
+   boxing_solo_deaths?: number;
+   boxing_solo_kills?: number;
+   boxing_solo_losses?: number;
+   boxing_solo_max_winstreak?: number;
+   boxing_solo_wins?: number;
+   boxing_solo_winstreak?: number;
+   boxing_wins?: number;
+   boxing_winstreak?: number;
+
+   bridge_1v1v1v1_winstreak?: number;
+   bridge_1v1v1v1_wins?: number;
+   bridge_1v1v1v1_losses?: number;
+   bridge_1v1v1v1_kills?: number;
+   bridge_1v1v1v1_deaths?: number;
+   bridge_deaths?: number;
+   bridge_doubles_deaths?: number;
+   bridge_doubles_kills?: number;
+   bridge_doubles_losses?: number;
+   bridge_doubles_max_winstreak?: number;
+   bridge_doubles_points?: number;
+   bridge_doubles_wins?: number;
+   bridge_doubles_winstreak?: number;
+   bridge_three_deaths?: number;
+   bridge_three_kills?: number;
+   bridge_three_losses?: number;
+   bridge_three_points?: number;
+   bridge_three_wins: number;
+   bridge_three_winstreak: number;
+   bridge_four_deaths?: number;
+   bridge_four_kills?: number;
+   bridge_four_points?: number;
+   bridge_four_wins?: number;
+   bridge_four_losses?: number;
+   bridge_four_winstreak?: number;
+   bridge_kills?: number;
+   bridge_losses?: number;
+   bridge_max_winstreak?: number;
+   bridge_points?: number;
+   bridge_solo_deaths?: number;
+   bridge_solo_kills?: number;
+   bridge_solo_losses?: number;
+   bridge_solo_max_winstreak?: number;
+   bridge_solo_points?: number;
+   bridge_solo_wins?: number;
+   bridge_solo_winstreak?: number;
+   bridge_wins?: number;
+   bridge_winstreak?: number;
+
+   gladiator_deaths: number;
+   gladiator_doubles_deaths: number;
+   gladiator_doubles_kills: number;
+   gladiator_doubles_losses: number;
+   gladiator_doubles_max_winstreak: number;
+   gladiator_doubles_wins: number;
+   gladiator_doubles_winstreak: number0;
+   gladiator_hg_solo_deaths: number1;
+   gladiator_hg_solo_kills: number;
+   gladiator_hg_solo_losses: number;
+   gladiator_hg_solo_wins: number;
+   gladiator_hg_solo_winstreak: number;
+   gladiator_hg_doubles_wins?: number;
+   gladiator_hg_doubles_losses?: number;
+   gladiator_hg_doubles_kills?: number;
+   gladiator_hg_doubles_deaths?: number;
+   gladiator_kills: number;
+   gladiator_losses: number;
+   gladiator_max_winstreak: number;
+   gladiator_solo_deaths: number;
+   gladiator_solo_kills: number;
+   gladiator_solo_losses: number;
+   gladiator_solo_max_winstreak: number;
+   gladiator_solo_wins: number;
+   gladiator_solo_winstreak: number;
+   gladiator_wins: number;
+   gladiator_winstreak: number;
+
+   soup_deaths: number;
+   soup_doubles_deaths: number;
+   soup_doubles_kills: number;
+   soup_doubles_losses: number;
+   soup_doubles_max_winstreak: number;
+   soup_doubles_wins: number;
+   soup_doubles_winstreak: number;
+   soup_kills: number;
+   soup_losses: number;
+   soup_max_winstreak: number;
+   soup_solo_deaths: number;
+   soup_solo_kills: number;
+   soup_solo_losses: number;
+   soup_solo_max_winstreak: number;
+   soup_solo_wins: number;
+   soup_solo_winstreak: number;
+   soup_wins: number;
+   soup_winstreak: number;
 }
