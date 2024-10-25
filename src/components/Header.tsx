@@ -12,7 +12,7 @@ function Header() {
       e.preventDefault();
       if (playerName.length) {
          setPlayerName("");
-         navigate(`/player/${playerName}`);
+         navigate(`/player/${playerName.trim()}`);
       }
    }
 
@@ -27,13 +27,11 @@ function Header() {
             <form onSubmit={handleSubmit}>
                <input
                   type="text"
-                  pattern="[a-zA-Z0-9_]{3,}"
+                  pattern="^\s*[a-zA-Z0-9_]{3,16}\s*$"
                   placeholder="Procurar jogador"
                   required
                   value={playerName}
-                  onChange={({ target }) => {
-                     setPlayerName(target.value);
-                  }}
+                  onChange={({ target }) => setPlayerName(target.value)}
                />
                <button className={styles.searchButton}>
                   <img src={SearchIcon} alt="Ícone de pesquisa" />

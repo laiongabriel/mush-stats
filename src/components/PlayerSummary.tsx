@@ -142,14 +142,21 @@ function PlayerSummary({ data }: PlayerSummaryProps) {
                <dt>Melhor tag</dt>
                <dd>
                   <span
-                     style={{
-                        color: `${data.response.best_tag.color}`,
-                        fontWeight: "600",
-                        textShadow: "1px 1px 1px rgba(0, 0, 0, 0.3)",
-                     }}
+                     className={styles.shadowedBold}
+                     style={{ color: `${data.response.best_tag.color}` }}
                   >
-                     {data.response.best_tag.name.toUpperCase()}
+                     {data.response.best_tag.data
+                        ? data.response.best_tag.name.toUpperCase().slice(0, -1)
+                        : data.response.best_tag.name.toUpperCase()}
                   </span>
+                  {data.response.best_tag.data && (
+                     <span
+                        className={styles.shadowedBold}
+                        style={{ color: data.response.best_tag.data?.plus }}
+                     >
+                        {data.response.best_tag.name.slice(-1)}
+                     </span>
+                  )}
                </dd>
             </div>
 

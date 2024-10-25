@@ -70,6 +70,11 @@
    line-height: 40px;
 }
 
+.shadowedBold {
+   font-weight: 600;
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
 .statsContainer {
    display: grid;
    gap: 1rem;

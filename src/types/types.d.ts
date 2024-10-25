@@ -9,6 +9,9 @@ type PlayerData = {
       };
       best_tag: {
          color: string;
+         data?: {
+            plus: string;
+         };
          name: string;
       };
       clan?: {
