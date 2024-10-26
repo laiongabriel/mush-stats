@@ -124,11 +124,8 @@ function PlayerSummary({ data }: PlayerSummaryProps) {
                <dd>
                   {data.response.clan ? (
                      <span
-                        style={{
-                           color: `${data.response.clan.tag_color}`,
-                           fontWeight: "600",
-                           textShadow: "1px 1px 1px rgba(0, 0, 0, 0.25)",
-                        }}
+                        className={styles.shadowedBold}
+                        style={{ color: `${data.response.clan.tag_color}` }}
                      >
                         {data.response.clan.tag}
                      </span>
@@ -152,7 +149,12 @@ function PlayerSummary({ data }: PlayerSummaryProps) {
                   {data.response.best_tag.data && (
                      <span
                         className={styles.shadowedBold}
-                        style={{ color: data.response.best_tag.data?.plus }}
+                        style={{
+                           color: data.response.best_tag.data?.plus.replace(
+                              "_",
+                              ""
+                           ),
+                        }}
                      >
                         {data.response.best_tag.name.slice(-1)}
                      </span>
