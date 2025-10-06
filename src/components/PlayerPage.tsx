@@ -16,59 +16,59 @@ import Gladiator from "./Minigames/Gladiator";
 import Soup from "./Minigames/Soup";
 
 function PlayerPage() {
-   const { playerName } = useParams();
-   const { data, loading, error } = useFetch<PlayerData>(
-      `https://mush.com.br/api/player/${playerName}`
-   );
+  const { playerName } = useParams();
+  const { data, loading, error } = useFetch<PlayerData>(
+    `https://mush.com.br/api/player/${playerName}`
+  );
 
-   if (loading) {
-      document.title = "Carregando... | Mush Stats";
-      return (
-         <div className="loadingContainer">
-            <Header />
-            <div className="loading"></div>
-            <p>Carregando estatísticas de {playerName}...</p>
-         </div>
-      );
-   }
-   if (error) return <p>Erro: {error}</p>;
-   if (data?.success === false) return <PlayerNotFound />;
-   if (!data) return null;
-   return (
-      <HelmetProvider>
-         <Helmet>
-            <title>{data.response.account.username} | Mush Stats</title>
-            <link
-               rel="shortcut icon"
-               href={`https://visage.surgeplay.com/face/16/${
-                  data.response.skin?.hash || data.response.account.username
-               }`}
-               type="image/x-icon"
-            />
-         </Helmet>
+  if (loading) {
+    document.title = "Carregando... | Mush Stats";
+    return (
+      <div className="loadingContainer">
+        <Header />
+        <div className="loading"></div>
+        <p>Carregando estatísticas de {playerName}...</p>
+      </div>
+    );
+  }
+  if (error) return <p>Erro: {error}</p>;
+  if (data?.success === false) return <PlayerNotFound />;
+  if (!data) return null;
+  return (
+    <HelmetProvider>
+      <Helmet>
+        <title>{data.response.account.username} | Mush Stats</title>
+        <link
+          rel="shortcut icon"
+          href={`https://visage.surgeplay.com/face/16/${
+            data.response.skin?.hash || data.response.account.username
+          }`}
+          type="image/x-icon"
+        />
+      </Helmet>
 
-         <Header />
-         <div className={styles.playerPageContainer}>
-            <section className={`${styles.playerSummaryContainer} animeLeft`}>
-               <PlayerSummary data={data} />
-            </section>
+      <Header />
+      <div className={styles.playerPageContainer}>
+        <section className={`${styles.playerSummaryContainer} animeLeft`}>
+          <PlayerSummary data={data} />
+        </section>
 
-            <section className={`${styles.statsContainer} animeLeft`}>
-               <Bedwars data={data.response.stats.bedwars} />
-               <Skywars data={data.response.stats.skywars_r1} />
-               <HungerGames data={data.response.stats.hungergames} />
-               <PvP data={data.response.stats.pvp} />
+        <section className={`${styles.statsContainer} animeLeft`}>
+          <Bedwars data={data.response.stats.bedwars} />
+          <Skywars data={data.response.stats.skywars_r1} />
+          <HungerGames data={data.response.stats.hungergames} />
+          <PvP data={data.response.stats.pvp} />
 
-               <h1>Duels</h1>
-               <Bedfight data={data.response.stats.duels} />
-               <Boxing data={data.response.stats.duels} />
-               <Bridge data={data.response.stats.duels} />
-               <Gladiator data={data.response.stats.duels} />
-               <Soup data={data.response.stats.duels} />
-            </section>
-         </div>
-      </HelmetProvider>
-   );
+          <h1>Duels</h1>
+          <Bedfight data={data.response.stats.duels} />
+          <Boxing data={data.response.stats.duels} />
+          <Bridge data={data.response.stats.duels} />
+          <Gladiator data={data.response.stats.duels} />
+          <Soup data={data.response.stats.duels} />
+        </section>
+      </div>
+    </HelmetProvider>
+  );
 }
 
 export default PlayerPage;

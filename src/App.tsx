@@ -8,22 +8,22 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/Helper/ScrollToTop";
 
 function App() {
-   return (
-      <BrowserRouter>
-         <ScrollToTop />
-         <div className="container">
-            <Header />
-            <main>
-               <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/player/:playerName" element={<PlayerPage />} />
-                  <Route path="*" element={<NotFound />} />
-               </Routes>
-            </main>
-         </div>
-         <Footer />
-      </BrowserRouter>
-   );
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="container">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/player/:playerName" element={<PlayerPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+      </div>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 export default App;
